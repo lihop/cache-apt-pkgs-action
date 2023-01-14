@@ -11,3 +11,8 @@ jobs:
       - uses: ./
         with:
           packages: sqlite3
+          # Shouldn't upload debug logs for this package.
+      - uses: ./
+        with:
+          packages: gcc-multilib
+          debug: 'true' # Should upload debug logs for this package.
